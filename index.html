@@ -1364,10 +1364,10 @@
                 transparent 75%
             );
             background-size: 1rem 1rem;
-            animation: progressStripe 1s linear infinite;
+            animation: progress-stripe 1s linear infinite;
         }
 
-        @keyframes progressStripe {
+        @keyframes progress-stripe {
             from { background-position: 1rem 0; }
             to { background-position: 0 0; }
         }
@@ -1629,7 +1629,7 @@
                         </div>
                     </div>
 
-                    <div class="subsection">
+                    <div class="subsection" id="modals">
                         <h3>Modal / Modal Dialog (Janela Modal)</h3>
                         <p class="subsection-desc">
                             Aquela "caixinha que aparece no canto" - uma janela flutuante que bloqueia a página de fundo.
@@ -1640,7 +1640,7 @@ Clique no botão para ver um exemplo de Modal em ação!
                         </div>
                     </div>
 
-                    <div class="subsection">
+                    <div class="subsection" id="toasts">
                         <h3>Toast / Notificação</h3>
                         <p class="subsection-desc">
                             Mensagem pequena que aparece geralmente no canto/topo e desaparece automaticamente.
@@ -1650,7 +1650,7 @@ Clique no botão para ver um exemplo de Modal em ação!
                         <button class="btn btn-danger" onclick="showToast('Erro ao processar!', 'error')">Erro</button>
                     </div>
 
-                    <div class="subsection">
+                    <div class="subsection" id="overlays">
                         <h3>Overlay (Sobreposição)</h3>
                         <p class="subsection-desc">
                             Camada translúcida que fica sobre tudo. Veja no Modal aberto!
@@ -1980,8 +1980,10 @@ Clique no botão para ver um exemplo de Modal em ação!
                         <div style="border: 3px solid #667eea; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
                             <p style="color: #667eea; font-weight: bold;">Veja a borda azul em volta!</p>
                         </div>
+                    </div>
 
-                        <h3 style="margin-top: 30px;">Shadow / Box Shadow (Sombra)</h3>
+                    <div class="subsection" id="shadows">
+                        <h3>Shadow / Box Shadow (Sombra)</h3>
                         <p class="subsection-desc">Efeito de sombra que dá profundidade</p>
                         <span class="example-label">Exemplo:</span>
                         <div style="background: white; padding: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); border-radius: 8px; margin: 20px 0;">
@@ -3028,12 +3030,12 @@ text-shadow: 1px 1px 0 red, 2px 2px 0 orange;
 
         // ============ ACCORDION ============
         function toggleAccordion(header) {
-            const item = header.parentElement;
-            const isActive = item.classList.contains('active');
+            var item = header.parentElement;
+            var isActive = item.classList.contains('active');
             
             // Close all items in the same accordion
-            var accordion = item.parentElement;
-            accordion.querySelectorAll('.accordion-item').forEach(function(i) {
+            var accordionContainer = item.parentElement;
+            accordionContainer.querySelectorAll('.accordion-item').forEach(function(i) {
                 i.classList.remove('active');
             });
             

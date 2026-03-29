@@ -9,11 +9,18 @@ Abra o arquivo `index.html` diretamente no seu navegador — nenhuma instalaçã
 ## ✨ Funcionalidades
 
 - **Navegação lateral** com rolagem suave entre as seções
+- **Busca/filtro** de termos na barra lateral
+- **Indicador de progresso de rolagem** no topo da página
 - **Modais** (janelas de diálogo) com suporte a sobreposição
 - **Notificações toast** (sucesso, aviso e erro) com auto-fechamento
 - **Componentes de formulário**: inputs, textareas, selects, checkboxes, radio buttons e toggles
-- **Demonstrações de layout**: Flexbox e CSS Grid
-- **Tipografia e estilos**: cores, gradientes, sombras, bordas e opacidade
+- **Componentes interativos**: acordeão, tooltips, tabs/abas, barras de progresso e breadcrumbs
+- **Demonstrações de layout**: Flexbox, CSS Grid, posicionamento CSS e overflow
+- **Tipografia e estilos**: cores, gradientes, sombras, bordas, opacidade e text-shadow
+- **Variáveis CSS**: demonstração interativa de custom properties
+- **Transformações CSS**: rotate, scale, skew e translate com exemplos visuais
+- **Filtros CSS**: blur, brightness, contrast, grayscale, sepia, saturate, hue-rotate e invert
+- **Pseudo-elementos**: ::before e ::after com exemplos decorativos
 - **Animações CSS**: transições, keyframes (girar, quicar, fade)
 - **Canvas HTML5** com desenho interativo de formas geométricas
 - **Design responsivo** com suporte a dispositivos móveis, tablets e desktops
