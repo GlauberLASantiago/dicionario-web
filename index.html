@@ -933,6 +933,12 @@
 
         <h3>Tipografia</h3>
         <a href="#typography">Tipografia</a>
+
+        <h3>SEO & HTML Semântico</h3>
+        <a href="#sitemap">Sitemap.xml</a>
+        <a href="#favicon">Favicon</a>
+        <a href="#meta-description">Meta Description</a>
+        <a href="#semantic-html">HTML Semântico</a>
     </aside>
 
     <!-- ============ HEADER ============ -->
@@ -1723,6 +1729,84 @@ document.querySelectorAll('p');
                         <p class="subsection-desc">Ordem em que os elementos recebem foco</p>
                         <span class="example-label">Tente:</span>
                         <p>Pressione TAB para navegar pelos elementos!</p>
+                    </div>
+
+                </section>
+
+                <!-- ============ SEO & HTML SEMÂNTICO ============ -->
+                <section class="section" id="sitemap">
+                    <h2>🔍 SEO & HTML Semântico</h2>
+
+                    <div class="subsection">
+                        <h3>Sitemap.xml (Mapa do Site)</h3>
+                        <p class="subsection-desc">Arquivo que lista todas as páginas do site para o Google saber que elas existem. É o oposto do robots.txt.</p>
+                        <div class="code-block">
+&lt;!-- sitemap.xml --&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://meusite.com/&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://meusite.com/sobre&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://meusite.com/contato&lt;/loc&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;
+                        </div>
+                    </div>
+
+                    <div class="subsection" id="favicon">
+                        <h3>Favicon</h3>
+                        <p class="subsection-desc">Aquele ícone pequeno que aparece na aba do navegador, identificando o site visualmente.</p>
+                        <div class="code-block">
+&lt;!-- No &lt;head&gt; do HTML --&gt;
+&lt;link rel="icon" type="image/png" href="/favicon.png"&gt;
+
+&lt;!-- Ou para múltiplos tamanhos: --&gt;
+&lt;link rel="icon" sizes="16x16" href="/favicon-16x16.png"&gt;
+&lt;link rel="icon" sizes="32x32" href="/favicon-32x32.png"&gt;
+&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;
+                        </div>
+                        <span class="example-label">Exemplo:</span>
+                        <p>O ícone 📚 que aparece na aba deste dicionário é um favicon!</p>
+                    </div>
+
+                    <div class="subsection" id="meta-description">
+                        <h3>Meta Description</h3>
+                        <p class="subsection-desc">O texto que aparece logo abaixo do título do site nos resultados de busca do Google.</p>
+                        <div class="code-block">
+&lt;!-- No &lt;head&gt; do HTML --&gt;
+&lt;meta name="description"
+  content="Aprenda termos web com exemplos interativos. Dicionário visual de HTML, CSS e JavaScript."&gt;
+
+&lt;!-- Resultado no Google: --&gt;
+📄 Dicionário de Termos Web
+Aprenda termos web com exemplos interativos.
+Dicionário visual de HTML, CSS e JavaScript.
+                        </div>
+                    </div>
+
+                    <div class="subsection" id="semantic-html">
+                        <h3>Semantic HTML / HTML Semântico</h3>
+                        <p class="subsection-desc">Usar tags que descrevem o significado do conteúdo, não apenas sua aparência. Ajuda o Google e leitores de tela a entenderem a página.</p>
+                        <div class="code-block">
+&lt;!-- ❌ Sem semântica (só divs): --&gt;
+&lt;div class="header"&gt;...&lt;/div&gt;
+&lt;div class="nav"&gt;...&lt;/div&gt;
+&lt;div class="content"&gt;...&lt;/div&gt;
+&lt;div class="footer"&gt;...&lt;/div&gt;
+
+&lt;!-- ✅ Com semântica: --&gt;
+&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+  &lt;aside&gt;...&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+                        </div>
                     </div>
 
                 </section>
